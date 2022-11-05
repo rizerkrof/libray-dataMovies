@@ -9,7 +9,7 @@ class TestImdbUtils(unittest.TestCase):
         errors = []
         testing_samples = [
             (
-                'test with parameter',
+                'integration test',
                 {
                     'movie':  {
                         "id":"tt1375666",
@@ -20,6 +20,12 @@ class TestImdbUtils(unittest.TestCase):
                     }
                 },
                 'tt1375666'
+            ),(
+                'empty test',
+                {
+                    'movie': {}
+                },
+                ''
             )
         ]
         for sample in testing_samples:
@@ -36,7 +42,7 @@ class TestImdbUtils(unittest.TestCase):
         errors = []
         testing_samples = [
             (
-                'test with parameter',
+                'integration test',
                 {
                     'response_content': {
                         "searchType":"Movie",
@@ -74,6 +80,13 @@ class TestImdbUtils(unittest.TestCase):
                     "title":"Inception",
                     "description":"2010 Leonardo DiCaprio, Joseph Gordon-Levitt"
                 }
+            ),
+            (
+                'empty test',
+                {
+                    'response_content': {}
+                },
+                {}
             )
         ]
         for sample in testing_samples:
