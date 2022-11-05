@@ -10,19 +10,34 @@ class ImdbApiCall:
 
     @classmethod
     def search_movies(cls, api_key, expression):
-        endPointUrl = ImdbEndPoint('SearchMovie', api_key, parameter=expression).value()
-        print(endPointUrl)
-        response = cls.requests.get(endPointUrl)
-        return Response(status_code=response.status_code, content=response.json())
+        try:
+            endPointUrl = ImdbEndPoint('SearchMovie', api_key, parameter=expression).value()
+            print(endPointUrl)
+            response = cls.requests.get(endPointUrl)
+            return Response(status_code=response.status_code, content=response.json())
+        except Exception as e:
+            print(e.__class__.__name__, 'as occured')
+            print(e.__str__())
+            return Response(status_code=response.status_code, content={})
 
     @classmethod
     def get_users_ratings(cls, api_key, id_movie):
-        endPointUrl = ImdbEndPoint('UserRatings', api_key, parameter=id_movie).value()
-        response = cls.requests.get(endPointUrl)
-        return Response(status_code=response.status_code, content=response.json())
+        try:
+            endPointUrl = ImdbEndPoint('UserRatings', api_key, parameter=id_movie).value()
+            response = cls.requests.get(endPointUrl)
+            return Response(status_code=response.status_code, content=response.json())
+        except Exception as e:
+            print(e.__class__.__name__, 'as occured')
+            print(e.__str__())
+            return Response(status_code=response.status_code, content={})
 
     @classmethod
     def get_reviews(cls, api_key, id_movie):
-        endPointUrl = ImdbEndPoint('Reviews', api_key, parameter=id_movie).value()
-        response = cls.requests.get(endPointUrl)
-        return Response(status_code=response.status_code, content=response.json())
+        try:
+            endPointUrl = ImdbEndPoint('Reviews', api_key, parameter=id_movie).value()
+            response = cls.requests.get(endPointUrl)
+            return Response(status_code=response.status_code, content=response.json())
+        except Exception as e:
+            print(e.__class__.__name__, 'as occured')
+            print(e.__str__())
+            return Response(status_code=response.status_code, content={})
