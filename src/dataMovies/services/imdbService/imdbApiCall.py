@@ -12,7 +12,6 @@ class ImdbApiCall:
     def search_movies(cls, api_key, expression):
         try:
             endPointUrl = ImdbEndPoint('SearchMovie', api_key, parameter=expression).value()
-            print(endPointUrl)
             response = cls.requests.get(endPointUrl)
             return Response(status_code=response.status_code, content=response.json())
         except Exception as e:
