@@ -16,6 +16,13 @@ class TestImdbEndPoint(unittest.TestCase):
                     'parameter': 'tt1375666'
                 },
                 'https://imdb-api.com/API/Reviews/k_12345678/tt1375666'
+            ),(
+                'test without parameter',
+                {
+                    'route': 'BoxOffice',
+                    'api_key': 'k_12345678'
+                },
+                'https://imdb-api.com/API/BoxOffice/k_12345678'
             )
         ]
         for sample in testing_samples:
