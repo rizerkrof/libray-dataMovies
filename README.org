@@ -2,14 +2,18 @@
 #+STARTUP: inlineimages nofold
 
 * Table of Contents :TOC_3:noexport:
-- [[#description][Description]]
-  - [[#maintainers][Maintainers]]
-- [[#prerequisites][Prerequisites]]
-- [[#features][Features]]
-- [[#configuration][Configuration]]
-- [[#troubleshooting][Troubleshooting]]
+- [[#description-][Description 😊]]
+  - [[#maintainers-][Maintainers 👨👩👧👦]]
+- [[#prerequisites-][Prerequisites 🌟]]
+- [[#installation-][Installation 🏁]]
+  - [[#from-official-repository-][From official repository ✅]]
+  - [[#from-tests-repository-][From tests repository 🚧]]
+- [[#usage-][Usage 😁]]
+- [[#run-tests-][Run tests ⚙]]
+  - [[#clone-the-repository][Clone the repository]]
+  - [[#run-unit-tests][run unit tests]]
 
-* Description
+* Description 😊
 DataMovies is a data-science focused library that allows you to request movies/series dataset via ImDb's API.
 
 Available for now:
@@ -20,16 +24,33 @@ Available for now:
   + ratings per age range for woman
   + ratings per age range for all
 
-** Maintainers
+** Maintainers 👨👩👧👦
 + [[https://github.com/rizerkrof][@rizerkrof]] (Author)
 
-* Prerequisites
-Python 3.8+
+* Prerequisites 🌟
++ Python >= 3.8
++ pip
 
-* Features
+* Installation 🏁
+** From official repository ✅
+#+begin_src sh
+pip install dataMovies
+#+end_src
+** From tests repository 🚧
+#+begin_src sh
+pip install -i https://test.pypi.org/simple/ dataMovies
+#+end_src
 
-* Configuration
-# How to configure this module, including common problems and how to address them.
+* Usage 😁
+See the ~examples~ folder for a usage guide
 
-* Troubleshooting
-# Common issues and their solution, or places to look for help.
+* Run tests ⚙
+** Clone the repository
+#+begin_src sh
+git clone https://github.com/rizerkrof/libray-dataMovies.git
+cd libray-dataMovies
+#+end_src
+** run unit tests
+#+begin_src sh
+python3 -m unittest discover --top-level-directory=. --start-directory=./tests/tests_dataMovies/
+#+end_src
