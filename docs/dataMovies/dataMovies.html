@@ -63,10 +63,10 @@ def search_movie_users_ratings_df(api_key, expression, stat=&#39;ratings&#39;):
         api_key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
         expression: search expression corresponding to your targeted movie (e.g. &#39;spider-man&#39;)
         stat (optional): string from {&#39;ratings&#39;, &#39;demographicMales&#39;, &#39;demographicFemales&#39;, &#39;demographicAll&#39;} (e.g. demographicAll)
-            &#39;ratings&#39; (default): shows the rating notes distribution among all voters
-            &#39;demographicMales&#39;: shows ratings per age range for males
-            &#39;demographicFemales&#39;: shows ratings per age range for females
-            &#39;demographicAll&#39;: shows ratings per age range for males and females
+            - &#39;ratings&#39; (default): shows the rating notes distribution among all voters
+            - &#39;demographicMales&#39;: shows ratings per age range for males
+            - &#39;demographicFemales&#39;: shows ratings per age range for females
+            - &#39;demographicAll&#39;: shows ratings per age range for males and females
 
     Returns:
         Movie users ratings in pandas.DataFrame() corresponding to searching expression regardings the stat you chose.
@@ -143,10 +143,10 @@ def search_movies_users_ratings_df(api_key, expressions, stat=&#39;ratings&#39;)
 <dd>search expression corresponding to your targeted movie (e.g. 'spider-man')</dd>
 <dt><strong><code>stat</code></strong> :&ensp;<code>optional</code></dt>
 <dd>string from {'ratings', 'demographicMales', 'demographicFemales', 'demographicAll'} (e.g. demographicAll)
-'ratings' (default): shows the rating notes distribution among all voters
-'demographicMales': shows ratings per age range for males
-'demographicFemales': shows ratings per age range for females
-'demographicAll': shows ratings per age range for males and females</dd>
+- 'ratings' (default): shows the rating notes distribution among all voters
+- 'demographicMales': shows ratings per age range for males
+- 'demographicFemales': shows ratings per age range for females
+- 'demographicAll': shows ratings per age range for males and females</dd>
 </dl>
 <h2 id="returns">Returns</h2>
 <p>Movie users ratings in pandas.DataFrame() corresponding to searching expression regardings the stat you chose.</p></div>
@@ -160,10 +160,10 @@ def search_movies_users_ratings_df(api_key, expressions, stat=&#39;ratings&#39;)
         api_key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
         expression: search expression corresponding to your targeted movie (e.g. &#39;spider-man&#39;)
         stat (optional): string from {&#39;ratings&#39;, &#39;demographicMales&#39;, &#39;demographicFemales&#39;, &#39;demographicAll&#39;} (e.g. demographicAll)
-            &#39;ratings&#39; (default): shows the rating notes distribution among all voters
-            &#39;demographicMales&#39;: shows ratings per age range for males
-            &#39;demographicFemales&#39;: shows ratings per age range for females
-            &#39;demographicAll&#39;: shows ratings per age range for males and females
+            - &#39;ratings&#39; (default): shows the rating notes distribution among all voters
+            - &#39;demographicMales&#39;: shows ratings per age range for males
+            - &#39;demographicFemales&#39;: shows ratings per age range for females
+            - &#39;demographicAll&#39;: shows ratings per age range for males and females
 
     Returns:
         Movie users ratings in pandas.DataFrame() corresponding to searching expression regardings the stat you chose.
