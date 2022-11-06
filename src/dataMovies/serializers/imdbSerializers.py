@@ -26,11 +26,11 @@ def imdb_users_ratings_to_df(users_ratings, stat):
     """Transform reviews to pandas.DataFrame() format.
     Args:
         users_ratings: a python dictionary corresponding to users_ratings
-        stat (optional): string from {'ratings', 'demographicMales', 'demographicFemales', 'demographicAll'} (e.g. demographicAll)
-            'ratings' (default): shows the rating notes distribution among all voters
-            'demographicMales': shows ratings per age range for males
-            'demographicFemales': shows ratings per age range for females
-            'demographicAll': shows ratings per age range for males and females
+        stat (optional): string from {'ratings', 'demographicMales', 'demographicFemales', 'demographicAll'} (e.g. demographicAll).
+            'ratings' (default): shows the rating notes distribution among all voters.
+            'demographicMales': shows ratings per age range for males.
+            'demographicFemales': shows ratings per age range for females.
+            'demographicAll': shows ratings per age range for males and females.
 
     Returns:
         A pandas.DataFrame() of the users_ratings.
