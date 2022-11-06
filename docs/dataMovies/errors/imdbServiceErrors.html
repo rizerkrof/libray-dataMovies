@@ -31,6 +31,11 @@ from .error import Error
 
 class ImdbResponseStatusCodeError(Error):
     def __init__(self, status_code, message):
+        &#34;&#34;&#34;Constructor
+        Args:
+            status_code: the ImDb API response status code as int (e.g. 200)
+            message: the error message as a string
+        &#34;&#34;&#34;
         self.message = message
         self.status_code = status_code
         super().__init__(self.message)
@@ -40,6 +45,11 @@ class ImdbResponseStatusCodeError(Error):
 
 class ImdbResponseContentError(Error):
     def __init__(self, content, message):
+        &#34;&#34;&#34;Constructor
+        Args:
+            content: the ImDb API response content as a python dictionary
+            message: the error message as a string
+        &#34;&#34;&#34;
         self.message = message
         self.content = content
         super().__init__(self.message)
@@ -62,13 +72,26 @@ class ImdbResponseContentError(Error):
 <span>(</span><span>content, message)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Common base class for all non-exit exceptions.</p></div>
+<div class="desc"><p>Main parent error class</p>
+<p>Constructor</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>content</code></strong></dt>
+<dd>the ImDb API response content as a python dictionary</dd>
+<dt><strong><code>message</code></strong></dt>
+<dd>the error message as a string</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class ImdbResponseContentError(Error):
     def __init__(self, content, message):
+        &#34;&#34;&#34;Constructor
+        Args:
+            content: the ImDb API response content as a python dictionary
+            message: the error message as a string
+        &#34;&#34;&#34;
         self.message = message
         self.content = content
         super().__init__(self.message)
@@ -88,13 +111,26 @@ class ImdbResponseContentError(Error):
 <span>(</span><span>status_code, message)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Common base class for all non-exit exceptions.</p></div>
+<div class="desc"><p>Main parent error class</p>
+<p>Constructor</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>status_code</code></strong></dt>
+<dd>the ImDb API response status code as int (e.g. 200)</dd>
+<dt><strong><code>message</code></strong></dt>
+<dd>the error message as a string</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class ImdbResponseStatusCodeError(Error):
     def __init__(self, status_code, message):
+        &#34;&#34;&#34;Constructor
+        Args:
+            status_code: the ImDb API response status code as int (e.g. 200)
+            message: the error message as a string
+        &#34;&#34;&#34;
         self.message = message
         self.status_code = status_code
         super().__init__(self.message)

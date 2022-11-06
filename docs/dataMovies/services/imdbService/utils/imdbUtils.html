@@ -27,11 +27,25 @@
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def get_movie_id(movie):
+    &#34;&#34;&#34;Get the id from a movie.
+    Args:
+        movie: a python dictionary corresponding to your targeted movie (e.g. the return of the search_movie() function)
+
+    Returns:
+        The movie id as a string.
+    &#34;&#34;&#34;
     if not &#39;id&#39; in movie:
         return &#39;&#39;
     return movie[&#39;id&#39;]
 
 def get_movies_first_result(response_content):
+    &#34;&#34;&#34;Get the first result from movie results list.
+    Args:
+        response_content: a python dictionary corresponding to the ImDb API response content
+
+    Returns:
+        The first/best movie in the results list as a python dictionary.
+    &#34;&#34;&#34;
     if not &#39;results&#39; in response_content:
         return {}
     return response_content[&#39;results&#39;][0]</code></pre>
@@ -48,12 +62,26 @@ def get_movies_first_result(response_content):
 <span>def <span class="ident">get_movie_id</span></span>(<span>movie)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Get the id from a movie.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>movie</code></strong></dt>
+<dd>a python dictionary corresponding to your targeted movie (e.g. the return of the search_movie() function)</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>The movie id as a string.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def get_movie_id(movie):
+    &#34;&#34;&#34;Get the id from a movie.
+    Args:
+        movie: a python dictionary corresponding to your targeted movie (e.g. the return of the search_movie() function)
+
+    Returns:
+        The movie id as a string.
+    &#34;&#34;&#34;
     if not &#39;id&#39; in movie:
         return &#39;&#39;
     return movie[&#39;id&#39;]</code></pre>
@@ -63,12 +91,26 @@ def get_movies_first_result(response_content):
 <span>def <span class="ident">get_movies_first_result</span></span>(<span>response_content)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Get the first result from movie results list.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>response_content</code></strong></dt>
+<dd>a python dictionary corresponding to the ImDb API response content</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>The first/best movie in the results list as a python dictionary.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def get_movies_first_result(response_content):
+    &#34;&#34;&#34;Get the first result from movie results list.
+    Args:
+        response_content: a python dictionary corresponding to the ImDb API response content
+
+    Returns:
+        The first/best movie in the results list as a python dictionary.
+    &#34;&#34;&#34;
     if not &#39;results&#39; in response_content:
         return {}
     return response_content[&#39;results&#39;][0]</code></pre>

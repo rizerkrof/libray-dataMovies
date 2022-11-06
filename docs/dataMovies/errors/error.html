@@ -29,7 +29,13 @@
 <pre><code class="python">#!/usr/bin/env python3
 
 class Error(Exception):
+    &#34;&#34;&#34;Main parent error class
+    &#34;&#34;&#34;
     def __init__(self, message):
+        &#34;&#34;&#34;Constructor
+        Args:
+            message: the error message as a string
+        &#34;&#34;&#34;
         self.message = message
         super().__init__(self.message)</code></pre>
 </details>
@@ -48,13 +54,25 @@ class Error(Exception):
 <span>(</span><span>message)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Common base class for all non-exit exceptions.</p></div>
+<div class="desc"><p>Main parent error class</p>
+<p>Constructor</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>message</code></strong></dt>
+<dd>the error message as a string</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class Error(Exception):
+    &#34;&#34;&#34;Main parent error class
+    &#34;&#34;&#34;
     def __init__(self, message):
+        &#34;&#34;&#34;Constructor
+        Args:
+            message: the error message as a string
+        &#34;&#34;&#34;
         self.message = message
         super().__init__(self.message)</code></pre>
 </details>

@@ -31,6 +31,13 @@ import pandas as pd
 from .utils.dictionaryTransform import nested_dict_to_list
 
 def imdb_reviews_to_df(reviews):
+    &#34;&#34;&#34;Transform reviews to pandas.DataFrame() format.
+    Args:
+        reviews: a python dictionary corresponding to reviews
+
+    Returns:
+        A pandas.DataFrame() of the reviews.
+    &#34;&#34;&#34;
     features = [&#39;items&#39;, &#39;imDbId&#39;, &#39;title&#39;, &#39;fullTitle&#39;, &#39;type&#39;, &#39;year&#39;]
     if not all(feature in reviews for feature in features):
         return pd.DataFrame()
@@ -44,6 +51,18 @@ def imdb_reviews_to_df(reviews):
     return reviews_df
 
 def imdb_users_ratings_to_df(users_ratings, stat):
+    &#34;&#34;&#34;Transform reviews to pandas.DataFrame() format.
+    Args:
+        users_ratings: a python dictionary corresponding to users_ratings
+        stat (optional): string from {&#39;ratings&#39;, &#39;demographicMales&#39;, &#39;demographicFemales&#39;, &#39;demographicAll&#39;} (e.g. demographicAll)
+            &#39;ratings&#39; (default): shows the rating notes distribution among all voters
+            &#39;demographicMales&#39;: shows ratings per age range for males
+            &#39;demographicFemales&#39;: shows ratings per age range for females
+            &#39;demographicAll&#39;: shows ratings per age range for males and females
+
+    Returns:
+        A pandas.DataFrame() of the users_ratings.
+    &#34;&#34;&#34;
     features = [&#39;imDbId&#39;, &#39;title&#39;, &#39;fullTitle&#39;, &#39;type&#39;, &#39;year&#39;, &#39;totalRating&#39;, &#39;totalRatingVotes&#39;, &#39;ratings&#39;, &#39;demographicAll&#39;, &#39;demographicMales&#39;, &#39;demographicFemales&#39;, stat]
     if not all(feature in users_ratings for feature in features):
         return pd.DataFrame()
@@ -72,12 +91,26 @@ def imdb_users_ratings_to_df(users_ratings, stat):
 <span>def <span class="ident">imdb_reviews_to_df</span></span>(<span>reviews)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Transform reviews to pandas.DataFrame() format.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>reviews</code></strong></dt>
+<dd>a python dictionary corresponding to reviews</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>A pandas.DataFrame() of the reviews.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def imdb_reviews_to_df(reviews):
+    &#34;&#34;&#34;Transform reviews to pandas.DataFrame() format.
+    Args:
+        reviews: a python dictionary corresponding to reviews
+
+    Returns:
+        A pandas.DataFrame() of the reviews.
+    &#34;&#34;&#34;
     features = [&#39;items&#39;, &#39;imDbId&#39;, &#39;title&#39;, &#39;fullTitle&#39;, &#39;type&#39;, &#39;year&#39;]
     if not all(feature in reviews for feature in features):
         return pd.DataFrame()
@@ -95,12 +128,37 @@ def imdb_users_ratings_to_df(users_ratings, stat):
 <span>def <span class="ident">imdb_users_ratings_to_df</span></span>(<span>users_ratings, stat)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Transform reviews to pandas.DataFrame() format.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>users_ratings</code></strong></dt>
+<dd>a python dictionary corresponding to users_ratings</dd>
+<dt><strong><code>stat</code></strong> :&ensp;<code>optional</code></dt>
+<dd>string from {'ratings', 'demographicMales', 'demographicFemales', 'demographicAll'} (e.g. demographicAll)
+'ratings' (default): shows the rating notes distribution among all voters
+'demographicMales': shows ratings per age range for males
+'demographicFemales': shows ratings per age range for females
+'demographicAll': shows ratings per age range for males and females</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>A pandas.DataFrame() of the users_ratings.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def imdb_users_ratings_to_df(users_ratings, stat):
+    &#34;&#34;&#34;Transform reviews to pandas.DataFrame() format.
+    Args:
+        users_ratings: a python dictionary corresponding to users_ratings
+        stat (optional): string from {&#39;ratings&#39;, &#39;demographicMales&#39;, &#39;demographicFemales&#39;, &#39;demographicAll&#39;} (e.g. demographicAll)
+            &#39;ratings&#39; (default): shows the rating notes distribution among all voters
+            &#39;demographicMales&#39;: shows ratings per age range for males
+            &#39;demographicFemales&#39;: shows ratings per age range for females
+            &#39;demographicAll&#39;: shows ratings per age range for males and females
+
+    Returns:
+        A pandas.DataFrame() of the users_ratings.
+    &#34;&#34;&#34;
     features = [&#39;imDbId&#39;, &#39;title&#39;, &#39;fullTitle&#39;, &#39;type&#39;, &#39;year&#39;, &#39;totalRating&#39;, &#39;totalRatingVotes&#39;, &#39;ratings&#39;, &#39;demographicAll&#39;, &#39;demographicMales&#39;, &#39;demographicFemales&#39;, stat]
     if not all(feature in users_ratings for feature in features):
         return pd.DataFrame()

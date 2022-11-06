@@ -38,6 +38,14 @@ class ImdbApiCall:
 
     @classmethod
     def search_movies(cls, api_key, expression):
+        &#34;&#34;&#34;Fetch movies corresponding expression from ImDb API.
+        Args:
+            api_key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+            expression: search expression corresponding to your targeted movie (e.g. &#39;spider-man&#39;)
+
+        Returns:
+            A Response object corresponding to ImDb API response.
+        &#34;&#34;&#34;
         try:
             endPointUrl = ImdbEndPoint(&#39;SearchMovie&#39;, api_key, parameter=expression).value()
             response = cls.requests.get(endPointUrl)
@@ -49,6 +57,14 @@ class ImdbApiCall:
 
     @classmethod
     def get_users_ratings(cls, api_key, id_movie):
+        &#34;&#34;&#34;Fetch movie users ratings corresponding movie id from ImDb API.
+        Args:
+            api_key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+            id: string id corresponding to your targeted movie (e.g. &#39;tt0145487&#39;)
+
+        Returns:
+            A Response object corresponding to ImDb API response.
+        &#34;&#34;&#34;
         try:
             endPointUrl = ImdbEndPoint(&#39;UserRatings&#39;, api_key, parameter=id_movie).value()
             response = cls.requests.get(endPointUrl)
@@ -60,6 +76,14 @@ class ImdbApiCall:
 
     @classmethod
     def get_reviews(cls, api_key, id_movie):
+        &#34;&#34;&#34;Fetch reviews corresponding movie id from ImDb API.
+        Args:
+            api_key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+            id: string id corresponding to your targeted movie (e.g. &#39;tt0145487&#39;)
+
+        Returns:
+            A Response object corresponding to ImDb API response.
+        &#34;&#34;&#34;
         try:
             endPointUrl = ImdbEndPoint(&#39;Reviews&#39;, api_key, parameter=id_movie).value()
             response = cls.requests.get(endPointUrl)
@@ -93,6 +117,14 @@ class ImdbApiCall:
 
     @classmethod
     def search_movies(cls, api_key, expression):
+        &#34;&#34;&#34;Fetch movies corresponding expression from ImDb API.
+        Args:
+            api_key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+            expression: search expression corresponding to your targeted movie (e.g. &#39;spider-man&#39;)
+
+        Returns:
+            A Response object corresponding to ImDb API response.
+        &#34;&#34;&#34;
         try:
             endPointUrl = ImdbEndPoint(&#39;SearchMovie&#39;, api_key, parameter=expression).value()
             response = cls.requests.get(endPointUrl)
@@ -104,6 +136,14 @@ class ImdbApiCall:
 
     @classmethod
     def get_users_ratings(cls, api_key, id_movie):
+        &#34;&#34;&#34;Fetch movie users ratings corresponding movie id from ImDb API.
+        Args:
+            api_key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+            id: string id corresponding to your targeted movie (e.g. &#39;tt0145487&#39;)
+
+        Returns:
+            A Response object corresponding to ImDb API response.
+        &#34;&#34;&#34;
         try:
             endPointUrl = ImdbEndPoint(&#39;UserRatings&#39;, api_key, parameter=id_movie).value()
             response = cls.requests.get(endPointUrl)
@@ -115,6 +155,14 @@ class ImdbApiCall:
 
     @classmethod
     def get_reviews(cls, api_key, id_movie):
+        &#34;&#34;&#34;Fetch reviews corresponding movie id from ImDb API.
+        Args:
+            api_key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+            id: string id corresponding to your targeted movie (e.g. &#39;tt0145487&#39;)
+
+        Returns:
+            A Response object corresponding to ImDb API response.
+        &#34;&#34;&#34;
         try:
             endPointUrl = ImdbEndPoint(&#39;Reviews&#39;, api_key, parameter=id_movie).value()
             response = cls.requests.get(endPointUrl)
@@ -137,13 +185,30 @@ class ImdbApiCall:
 <span>def <span class="ident">get_reviews</span></span>(<span>api_key, id_movie)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Fetch reviews corresponding movie id from ImDb API.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>api_key</code></strong></dt>
+<dd>a valid ImDb API token string (e.g. 'k_12345678')</dd>
+<dt><strong><code>id</code></strong></dt>
+<dd>string id corresponding to your targeted movie (e.g. 'tt0145487')</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>A Response object corresponding to ImDb API response.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@classmethod
 def get_reviews(cls, api_key, id_movie):
+    &#34;&#34;&#34;Fetch reviews corresponding movie id from ImDb API.
+    Args:
+        api_key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+        id: string id corresponding to your targeted movie (e.g. &#39;tt0145487&#39;)
+
+    Returns:
+        A Response object corresponding to ImDb API response.
+    &#34;&#34;&#34;
     try:
         endPointUrl = ImdbEndPoint(&#39;Reviews&#39;, api_key, parameter=id_movie).value()
         response = cls.requests.get(endPointUrl)
@@ -158,13 +223,30 @@ def get_reviews(cls, api_key, id_movie):
 <span>def <span class="ident">get_users_ratings</span></span>(<span>api_key, id_movie)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Fetch movie users ratings corresponding movie id from ImDb API.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>api_key</code></strong></dt>
+<dd>a valid ImDb API token string (e.g. 'k_12345678')</dd>
+<dt><strong><code>id</code></strong></dt>
+<dd>string id corresponding to your targeted movie (e.g. 'tt0145487')</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>A Response object corresponding to ImDb API response.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@classmethod
 def get_users_ratings(cls, api_key, id_movie):
+    &#34;&#34;&#34;Fetch movie users ratings corresponding movie id from ImDb API.
+    Args:
+        api_key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+        id: string id corresponding to your targeted movie (e.g. &#39;tt0145487&#39;)
+
+    Returns:
+        A Response object corresponding to ImDb API response.
+    &#34;&#34;&#34;
     try:
         endPointUrl = ImdbEndPoint(&#39;UserRatings&#39;, api_key, parameter=id_movie).value()
         response = cls.requests.get(endPointUrl)
@@ -179,13 +261,30 @@ def get_users_ratings(cls, api_key, id_movie):
 <span>def <span class="ident">search_movies</span></span>(<span>api_key, expression)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Fetch movies corresponding expression from ImDb API.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>api_key</code></strong></dt>
+<dd>a valid ImDb API token string (e.g. 'k_12345678')</dd>
+<dt><strong><code>expression</code></strong></dt>
+<dd>search expression corresponding to your targeted movie (e.g. 'spider-man')</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>A Response object corresponding to ImDb API response.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">@classmethod
 def search_movies(cls, api_key, expression):
+    &#34;&#34;&#34;Fetch movies corresponding expression from ImDb API.
+    Args:
+        api_key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+        expression: search expression corresponding to your targeted movie (e.g. &#39;spider-man&#39;)
+
+    Returns:
+        A Response object corresponding to ImDb API response.
+    &#34;&#34;&#34;
     try:
         endPointUrl = ImdbEndPoint(&#39;SearchMovie&#39;, api_key, parameter=expression).value()
         response = cls.requests.get(endPointUrl)

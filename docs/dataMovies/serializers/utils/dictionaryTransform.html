@@ -29,6 +29,15 @@
 <pre><code class="python">#!/usr/bin/env python3
 
 def nested_dict_to_list(dictionary, item_to_transform, new_item_key):
+    &#34;&#34;&#34;Transform a nested python dictionary to a list of python dictionay.
+    Args:
+        dictionary: the python dictionary you want to transform
+        item_to_transform: the item, as a string, of the dictionary you want to transform
+        new_item_key: a string corresponding to the new key name that will describe all the keys of item_to_transform
+
+    Returns:
+        The transformed python dictionary.
+    &#34;&#34;&#34;
     transformedDictionary = dictionary.copy()
     if not item_to_transform in transformedDictionary:
         return transformedDictionary
@@ -47,12 +56,32 @@ def nested_dict_to_list(dictionary, item_to_transform, new_item_key):
 <span>def <span class="ident">nested_dict_to_list</span></span>(<span>dictionary, item_to_transform, new_item_key)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Transform a nested python dictionary to a list of python dictionay.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>dictionary</code></strong></dt>
+<dd>the python dictionary you want to transform</dd>
+<dt><strong><code>item_to_transform</code></strong></dt>
+<dd>the item, as a string, of the dictionary you want to transform</dd>
+<dt><strong><code>new_item_key</code></strong></dt>
+<dd>a string corresponding to the new key name that will describe all the keys of item_to_transform</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>The transformed python dictionary.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def nested_dict_to_list(dictionary, item_to_transform, new_item_key):
+    &#34;&#34;&#34;Transform a nested python dictionary to a list of python dictionay.
+    Args:
+        dictionary: the python dictionary you want to transform
+        item_to_transform: the item, as a string, of the dictionary you want to transform
+        new_item_key: a string corresponding to the new key name that will describe all the keys of item_to_transform
+
+    Returns:
+        The transformed python dictionary.
+    &#34;&#34;&#34;
     transformedDictionary = dictionary.copy()
     if not item_to_transform in transformedDictionary:
         return transformedDictionary

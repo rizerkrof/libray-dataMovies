@@ -29,10 +29,19 @@
 <pre><code class="python">import requests
 
 class ImdbRequests:
+    &#34;&#34;&#34;Class used to encapsulate request package
+    &#34;&#34;&#34;
     def __init__(self):
         self.req = requests
 
     def get(self, url):
+        &#34;&#34;&#34;Get the response from a url.
+        Args:
+            url: the targeted url as a string (e.g. &#39;https://imdb-api.com/API/BoxOffice/k_12345678&#39;)
+
+        Returns:
+            The response from the url as a python dictionary.
+        &#34;&#34;&#34;
         return self.req.get(url)</code></pre>
 </details>
 </section>
@@ -49,16 +58,25 @@ class ImdbRequests:
 <span>class <span class="ident">ImdbRequests</span></span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Class used to encapsulate request package</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class ImdbRequests:
+    &#34;&#34;&#34;Class used to encapsulate request package
+    &#34;&#34;&#34;
     def __init__(self):
         self.req = requests
 
     def get(self, url):
+        &#34;&#34;&#34;Get the response from a url.
+        Args:
+            url: the targeted url as a string (e.g. &#39;https://imdb-api.com/API/BoxOffice/k_12345678&#39;)
+
+        Returns:
+            The response from the url as a python dictionary.
+        &#34;&#34;&#34;
         return self.req.get(url)</code></pre>
 </details>
 <h3>Methods</h3>
@@ -67,12 +85,26 @@ class ImdbRequests:
 <span>def <span class="ident">get</span></span>(<span>self, url)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Get the response from a url.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>url</code></strong></dt>
+<dd>the targeted url as a string (e.g. 'https://imdb-api.com/API/BoxOffice/k_12345678')</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>The response from the url as a python dictionary.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def get(self, url):
+    &#34;&#34;&#34;Get the response from a url.
+    Args:
+        url: the targeted url as a string (e.g. &#39;https://imdb-api.com/API/BoxOffice/k_12345678&#39;)
+
+    Returns:
+        The response from the url as a python dictionary.
+    &#34;&#34;&#34;
     return self.req.get(url)</code></pre>
 </details>
 </dd>

@@ -32,27 +32,67 @@ from .utils.imdbUtils import get_movie_id
 from .utils.imdbUtils import get_movies_first_result
 
 def search_movie(api_key, expression):
+    &#34;&#34;&#34;Fetch the best corresponding movie to expression from ImDb API.
+    Args:
+        key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+        expression: search expression corresponding to your targeted movie (e.g. &#39;spider-man&#39;)
+
+    Returns:
+        A python dictionary corresponding to the best movie.
+    &#34;&#34;&#34;
     movies_response = ImdbApiCall.search_movies(api_key, expression)
     movies = movies_response.content
     movie = get_movies_first_result(movies)
     return movie
 
 def get_movie_reviews(api_key, movie):
+    &#34;&#34;&#34;Fetch movie reviews corresponding to expression from ImDb API.
+    Args:
+        key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+        movie: a python dictionary corresponding to your targeted movie (e.g. the return of the search_movie() function)
+
+    Returns:
+        A python dictionary corresponding to movie reviews.
+    &#34;&#34;&#34;
     movie_id = get_movie_id(movie)
     reviews_reponse = ImdbApiCall.get_reviews(api_key, movie_id)
     return reviews_reponse.content
 
 def get_movie_users_ratings(api_key, movie):
+    &#34;&#34;&#34;Fetch movie users ratings corresponding to expression from ImDb API.
+    Args:
+        key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+        movie: a python dictionary corresponding to your targeted movie (e.g. the return of the search_movie() function)
+
+    Returns:
+        A python dictionary corresponding to movie users ratings.
+    &#34;&#34;&#34;
     movie_id = get_movie_id(movie)
     users_ratings_response = ImdbApiCall.get_users_ratings(api_key, movie_id)
     return users_ratings_response.content
 
 def search_movie_reviews(api_key, expression):
+    &#34;&#34;&#34;Fetch movie reviews corresponding to expression from ImDb API.
+    Args:
+        key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+        expression: search expression corresponding to your targeted movie (e.g. &#39;spider-man&#39;)
+
+    Returns:
+        A python dictionary corresponding to movie reviews.
+    &#34;&#34;&#34;
     movie = search_movie(api_key, expression)
     movie_reviews = get_movie_reviews(api_key, movie)
     return movie_reviews
 
 def search_movie_users_ratings(api_key, expression):
+    &#34;&#34;&#34;Fetch movie users ratings corresponding to expression from ImDb API.
+    Args:
+        key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+        expression: search expression corresponding to your targeted movie (e.g. &#39;spider-man&#39;)
+
+    Returns:
+        A python dictionary corresponding to movie users ratings.
+    &#34;&#34;&#34;
     movie = search_movie(api_key, expression)
     movie_users_ratings = get_movie_users_ratings(api_key, movie)
     return movie_users_ratings</code></pre>
@@ -69,12 +109,29 @@ def search_movie_users_ratings(api_key, expression):
 <span>def <span class="ident">get_movie_reviews</span></span>(<span>api_key, movie)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Fetch movie reviews corresponding to expression from ImDb API.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>key</code></strong></dt>
+<dd>a valid ImDb API token string (e.g. 'k_12345678')</dd>
+<dt><strong><code>movie</code></strong></dt>
+<dd>a python dictionary corresponding to your targeted movie (e.g. the return of the search_movie() function)</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>A python dictionary corresponding to movie reviews.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def get_movie_reviews(api_key, movie):
+    &#34;&#34;&#34;Fetch movie reviews corresponding to expression from ImDb API.
+    Args:
+        key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+        movie: a python dictionary corresponding to your targeted movie (e.g. the return of the search_movie() function)
+
+    Returns:
+        A python dictionary corresponding to movie reviews.
+    &#34;&#34;&#34;
     movie_id = get_movie_id(movie)
     reviews_reponse = ImdbApiCall.get_reviews(api_key, movie_id)
     return reviews_reponse.content</code></pre>
@@ -84,12 +141,29 @@ def search_movie_users_ratings(api_key, expression):
 <span>def <span class="ident">get_movie_users_ratings</span></span>(<span>api_key, movie)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Fetch movie users ratings corresponding to expression from ImDb API.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>key</code></strong></dt>
+<dd>a valid ImDb API token string (e.g. 'k_12345678')</dd>
+<dt><strong><code>movie</code></strong></dt>
+<dd>a python dictionary corresponding to your targeted movie (e.g. the return of the search_movie() function)</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>A python dictionary corresponding to movie users ratings.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def get_movie_users_ratings(api_key, movie):
+    &#34;&#34;&#34;Fetch movie users ratings corresponding to expression from ImDb API.
+    Args:
+        key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+        movie: a python dictionary corresponding to your targeted movie (e.g. the return of the search_movie() function)
+
+    Returns:
+        A python dictionary corresponding to movie users ratings.
+    &#34;&#34;&#34;
     movie_id = get_movie_id(movie)
     users_ratings_response = ImdbApiCall.get_users_ratings(api_key, movie_id)
     return users_ratings_response.content</code></pre>
@@ -99,12 +173,29 @@ def search_movie_users_ratings(api_key, expression):
 <span>def <span class="ident">search_movie</span></span>(<span>api_key, expression)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Fetch the best corresponding movie to expression from ImDb API.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>key</code></strong></dt>
+<dd>a valid ImDb API token string (e.g. 'k_12345678')</dd>
+<dt><strong><code>expression</code></strong></dt>
+<dd>search expression corresponding to your targeted movie (e.g. 'spider-man')</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>A python dictionary corresponding to the best movie.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def search_movie(api_key, expression):
+    &#34;&#34;&#34;Fetch the best corresponding movie to expression from ImDb API.
+    Args:
+        key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+        expression: search expression corresponding to your targeted movie (e.g. &#39;spider-man&#39;)
+
+    Returns:
+        A python dictionary corresponding to the best movie.
+    &#34;&#34;&#34;
     movies_response = ImdbApiCall.search_movies(api_key, expression)
     movies = movies_response.content
     movie = get_movies_first_result(movies)
@@ -115,12 +206,29 @@ def search_movie_users_ratings(api_key, expression):
 <span>def <span class="ident">search_movie_reviews</span></span>(<span>api_key, expression)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Fetch movie reviews corresponding to expression from ImDb API.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>key</code></strong></dt>
+<dd>a valid ImDb API token string (e.g. 'k_12345678')</dd>
+<dt><strong><code>expression</code></strong></dt>
+<dd>search expression corresponding to your targeted movie (e.g. 'spider-man')</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>A python dictionary corresponding to movie reviews.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def search_movie_reviews(api_key, expression):
+    &#34;&#34;&#34;Fetch movie reviews corresponding to expression from ImDb API.
+    Args:
+        key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+        expression: search expression corresponding to your targeted movie (e.g. &#39;spider-man&#39;)
+
+    Returns:
+        A python dictionary corresponding to movie reviews.
+    &#34;&#34;&#34;
     movie = search_movie(api_key, expression)
     movie_reviews = get_movie_reviews(api_key, movie)
     return movie_reviews</code></pre>
@@ -130,12 +238,29 @@ def search_movie_users_ratings(api_key, expression):
 <span>def <span class="ident">search_movie_users_ratings</span></span>(<span>api_key, expression)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Fetch movie users ratings corresponding to expression from ImDb API.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>key</code></strong></dt>
+<dd>a valid ImDb API token string (e.g. 'k_12345678')</dd>
+<dt><strong><code>expression</code></strong></dt>
+<dd>search expression corresponding to your targeted movie (e.g. 'spider-man')</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>A python dictionary corresponding to movie users ratings.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def search_movie_users_ratings(api_key, expression):
+    &#34;&#34;&#34;Fetch movie users ratings corresponding to expression from ImDb API.
+    Args:
+        key: a valid ImDb API token string (e.g. &#39;k_12345678&#39;)
+        expression: search expression corresponding to your targeted movie (e.g. &#39;spider-man&#39;)
+
+    Returns:
+        A python dictionary corresponding to movie users ratings.
+    &#34;&#34;&#34;
     movie = search_movie(api_key, expression)
     movie_users_ratings = get_movie_users_ratings(api_key, movie)
     return movie_users_ratings</code></pre>

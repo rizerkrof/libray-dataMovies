@@ -30,7 +30,18 @@
 from ...errors.imdbServiceErrors import ImdbResponseStatusCodeError
 
 class Response:
+    &#34;&#34;&#34;Response class used to encapsulate ImDb API response
+    &#34;&#34;&#34;
     def __init__(self, status_code, content):
+        &#34;&#34;&#34;Constructor
+        Args:
+            status_code: the ImDb API response status code as int (e.g. 200)
+            content: the ImDb API response content as a python dictionary
+
+        Raises:
+            ImdbResponseStatusCodeError: if status code not 200
+            ImdbResponseContentError: if there is an error message in response content
+        &#34;&#34;&#34;
         if status_code != 200:
             raise ImdbResponseStatusCodeError(status_code, &#39;Imdb response FAILED.&#39;)
         if &#39;errorMessage&#39; in content and content[&#39;errorMessage&#39;] != &#39;&#39;:
@@ -54,13 +65,39 @@ class Response:
 <span>(</span><span>status_code, content)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Response class used to encapsulate ImDb API response</p>
+<p>Constructor</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>status_code</code></strong></dt>
+<dd>the ImDb API response status code as int (e.g. 200)</dd>
+<dt><strong><code>content</code></strong></dt>
+<dd>the ImDb API response content as a python dictionary</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>ImdbResponseStatusCodeError</code></dt>
+<dd>if status code not 200</dd>
+<dt><code>ImdbResponseContentError</code></dt>
+<dd>if there is an error message in response content</dd>
+</dl></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class Response:
+    &#34;&#34;&#34;Response class used to encapsulate ImDb API response
+    &#34;&#34;&#34;
     def __init__(self, status_code, content):
+        &#34;&#34;&#34;Constructor
+        Args:
+            status_code: the ImDb API response status code as int (e.g. 200)
+            content: the ImDb API response content as a python dictionary
+
+        Raises:
+            ImdbResponseStatusCodeError: if status code not 200
+            ImdbResponseContentError: if there is an error message in response content
+        &#34;&#34;&#34;
         if status_code != 200:
             raise ImdbResponseStatusCodeError(status_code, &#39;Imdb response FAILED.&#39;)
         if &#39;errorMessage&#39; in content and content[&#39;errorMessage&#39;] != &#39;&#39;:
