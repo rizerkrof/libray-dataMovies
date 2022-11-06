@@ -1,0 +1,29 @@
+#+title: Usage example
+
+* Setup ImDb API key
+** Get a key
+1) [[https://imdb-api.com/][Create a ImDb API]].
+2) grab your api key from ~/account/profile~ section.
+** setup environment variables
+1) Rename the file ~.env.example~ to ~.env~.
+2) Update file with your personal api Key
+* Run exmaple
+Once you have installed dataMovies package and setup you ImDb api key it's time to run the example script! Enter the following command at the *repository root directory*:
+#+begin_src sh
+python3 examples/example.py
+#+end_src
+You should get the following result:
+#+begin_src sh
+  review_rating review_percent review_votes     imDbId       title          fullTitle   type  year totalRating totalRatingVotes
+0            10           9.7%        77898  tt0145487  Spider-Man  Spider-Man (2002)  Movie  2002         7.4                0
+1             9          10.7%        86280  tt0145487  Spider-Man  Spider-Man (2002)  Movie  2002         7.4                0
+2             8          28.5%       230077  tt0145487  Spider-Man  Spider-Man (2002)  Movie  2002         7.4                0
+3             7          31.4%       253165  tt0145487  Spider-Man  Spider-Man (2002)  Movie  2002         7.4                0
+4             6          12.0%        96735  tt0145487  Spider-Man  Spider-Man (2002)  Movie  2002         7.4                0
+5             5           4.1%        33228  tt0145487  Spider-Man  Spider-Man (2002)  Movie  2002         7.4                0
+6             4           1.5%        12208  tt0145487  Spider-Man  Spider-Man (2002)  Movie  2002         7.4                0
+7             3           0.8%         6512  tt0145487  Spider-Man  Spider-Man (2002)  Movie  2002         7.4                0
+8             2           0.5%         3836  tt0145487  Spider-Man  Spider-Man (2002)  Movie  2002         7.4                0
+9             1           0.9%         7151  tt0145487  Spider-Man  Spider-Man (2002)  Movie  2002         7.4                0
+#+end_src
+Don't forget do check the [[https://rizerkrof.github.io/libray-dataMovies/dataMovies/dataMovies.html][documentation]] for more features
