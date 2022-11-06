@@ -4,10 +4,8 @@
 * Table of Contents :TOC_3:noexport:
 - [[#description-][Description 😊]]
   - [[#maintainers-][Maintainers 👨👩👧👦]]
-- [[#prerequisites-][Prerequisites 🌟]]
-- [[#installation-][Installation 🏁]]
-  - [[#from-official-repository-][From official repository ✅]]
-  - [[#from-tests-repository-][From tests repository 🚧]]
+- [[#prerequisites-][Prerequisites 🏁]]
+- [[#installation-][Installation ✅]]
 - [[#usage-][Usage 😁]]
 - [[#run-tests-][Run tests ⚙]]
   - [[#clone-the-repository][Clone the repository]]
@@ -25,24 +23,22 @@ Available for now:
   + ratings per age range for all
 
 ** Maintainers 👨👩👧👦
-+ [[https://github.com/rizerkrof][@rizerkrof]] (Author)
++ [[https://github.com/rizerkrof][@rizerkrof]]
++ [[https://github.com/Zuwhity][@Zuwhity]]
++ [[https://github.com/HaozGU][@HaozGU]]
 
-* Prerequisites 🌟
+* Prerequisites 🏁
 + Python >= 3.8
 + pip
 
-* Installation 🏁
-** From official repository ✅
+* Installation ✅
+From official repository:
 #+begin_src sh
 pip install dataMovies
 #+end_src
-** From tests repository 🚧
-#+begin_src sh
-pip install -i https://test.pypi.org/simple/ dataMovies
-#+end_src
 
 * Usage 😁
-See the ~examples~ folder for a usage guide
+See ~examples~ folder for a use guide. Do not forget to check the [[https://rizerkrof.github.io/libray-dataMovies/dataMovies/dataMovies.html][documentation]] to see all features!
 
 * Run tests ⚙
 ** Clone the repository
