@@ -7,3 +7,6 @@ tmp/
 *.egg
 build
 htmlcov
+dist/
+*.egg-info/
+*.md
