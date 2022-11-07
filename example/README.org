@@ -7,10 +7,10 @@
 ** setup environment variables
 1) Rename the file ~.env.example~ to ~.env~.
 2) Update file with your personal api Key
-* Run exmaple
+* Run example
 Once you have installed dataMovies package and setup you ImDb api key it's time to run the example script! Enter the following command at the *repository root directory*:
 #+begin_src sh
-python3 examples/example.py
+python3 example/main.py
 #+end_src
 You should get the following result:
 #+begin_src sh
@@ -26,4 +26,4 @@ You should get the following result:
 8             2           0.5%         3836  tt0145487  Spider-Man  Spider-Man (2002)  Movie  2002         7.4                0
 9             1           0.9%         7151  tt0145487  Spider-Man  Spider-Man (2002)  Movie  2002         7.4                0
 #+end_src
-Don't forget do check the [[https://rizerkrof.github.io/libray-dataMovies/dataMovies/dataMovies.html][documentation]] for more features
+Don't forget do check the [[https://rizerkrof.github.io/libray-dataMovies/dataMovies/dataMovies.html][documentation]] for more features information.
