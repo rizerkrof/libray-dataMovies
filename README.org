@@ -32,7 +32,7 @@ Available for now:
 + pip
 
 * Installation ✅
-From official repository:
+From [[https://pypi.org/project/dataMovies/][official repository]]:
 #+begin_src sh
 pip install dataMovies
 #+end_src
