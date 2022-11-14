@@ -38,7 +38,7 @@ pip install dataMovies
 #+end_src
 
 * Usage 😁
-Look at the [[https://github.com/rizerkrof/libray-dataMovies/tree/main/example][example]] to know more about the use. Do not forget to check the [[https://rizerkrof.github.io/libray-dataMovies/dataMovies/dataMovies.html][documentation]] to see all features information!
+Look at the [[https://github.com/rizerkrof/libray-dataMovies/tree/main/example][example]] to know more about the use. Do not forget to check the [[https://rizerkrof.github.io/libray-dataMovies/dataMovies/index.html][documentation]] to see all features information!
 
 * Run tests ⚙
 ** Clone the repository
